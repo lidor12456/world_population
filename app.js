@@ -8,6 +8,7 @@ const europeBtn = document.querySelector(".Europe")
 const oceaniaBtn = document.querySelector(".Oceania")
 const chartContainer = document.querySelector(".chart-js-container")
 const countriesOfRegionDiv = document.querySelector(".countries-of-region")
+const ctx = document.getElementById("myChart").getContext("2d");
 // const myChart = document.querySelector("#myChart")
 
 
@@ -83,8 +84,10 @@ return arr2
 
 
 const drawChart = async (firstTenCountriesArr,populationsArr) => {
-const ctx = document.getElementById("myChart").getContext("2d");
+    ctx.style.height = "60vh";
+
 const myChart = new Chart(ctx, {
+
   type: "bar",
  
 
@@ -141,6 +144,7 @@ const drawByClick = (string) => {
       chartStatus.destroy();
     }
 
+
     drawChart(getFirstTenCountries(getContinents(),string)
     .then((e)=> {
        return(e);
@@ -174,6 +178,7 @@ const createCountriesOfRegion = async (obj,region) => {
 
 
 asiaBtn.addEventListener('click',()=> {
+    
     drawByClick("Asia")
     createCountriesOfRegion(getContinents(),"Asia")
 
