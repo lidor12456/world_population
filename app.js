@@ -8,7 +8,7 @@ const europeBtn = document.querySelector(".Europe")
 const oceaniaBtn = document.querySelector(".Oceania")
 const chartContainer = document.querySelector(".chart-js-container")
 const countriesOfRegionDiv = document.querySelector(".countries-of-region")
-const ctx = document.getElementById("myChart").getContext("2d");
+const ctx = document.getElementById("myChart")
 // const myChart = document.querySelector("#myChart")
 
 
@@ -84,7 +84,7 @@ return arr2
 
 
 const drawChart = async (firstTenCountriesArr,populationsArr) => {
-    ctx.style.height = "60vh";
+    ctx.style.maxHeight = "60vh";
 
 const myChart = new Chart(ctx, {
 
