@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+}
+
+.regions-btns{
+    min-width: 100vw;
+    height: 10vh;
+    background-color: lightseagreen;
+    /* border: 1px solid black; */
+
+}
+.chart-js-container{
+    position: relative;
+   min-width: 100vw;
+    height: 60vh;
+    background-color: lightskyblue;
+    /* border: 1px solid black; */
+}
+.countries-of-region{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 30vh;
+    background-color: lightseagreen;
+    
+
+}
+#myChart{
+    min-width: 100vw;
+    height: 60vh;
+}
+.myChart{
+    position: absolute ;
+    min-width: 100vw;
+    height: 60vh;
+}
+.country-of-region {
+margin: 5px;
+
+}
